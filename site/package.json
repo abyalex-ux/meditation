@@ -1,0 +1,9 @@
+{
+  "name": "meditation",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": { "dev": "vite", "build": "tsc -b && vite build", "preview": "vite preview" },
+  "dependencies": { "@vitejs/plugin-react": "latest", "hono": "latest", "react": "19.2.6", "react-dom": "19.2.6", "zod": "latest" },
+  "devDependencies": { "typescript": "latest", "vite": "latest", "@cloudflare/workers-types": "latest" }
+}
