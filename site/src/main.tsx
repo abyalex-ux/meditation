@@ -16,7 +16,7 @@ const techniques = [
 ];
 
 function App() {
-  const [sessions, setSessions] = useState<MeditationSession[]>([]);
+  const [sessions, setSessions] = useState<MeditationSession[]>([{ id: 'welcome', title: 'Morning grounding', durationMinutes: 10, completedAt: null, createdAt: new Date().toISOString() }, { id: 'focus', title: 'Focused breathing', durationMinutes: 15, completedAt: null, createdAt: new Date().toISOString() }]);
   const [duration, setDuration] = useState(10);
   const [showForm, setShowForm] = useState(false);
   const [title, setTitle] = useState('');
@@ -24,7 +24,7 @@ function App() {
   const completed = sessions.filter((session) => session.completedAt).length;
   const minutes = useMemo(() => sessions.reduce((sum, session) => sum + (session.completedAt ? session.durationMinutes : 0), 0), [sessions]);
 
-  useEffect(() => { fetch('/api/sessions').then((response) => response.json()).then((data) => setSessions(data)).catch(() => setSessions([])); }, []);
+  useEffect(() => { fetch('/api/sessions').then((response) => response.ok ? response.json() : null).then((data) => { if (Array.isArray(data)) setSessions(data); }).catch(() => undefined); }, []);
 
   async function addSession(event: React.FormEvent) {
     event.preventDefault();
