@@ -1,0 +1,11 @@
+name = "meditation"
+main = "worker/index.ts"
+compatibility_date = "2026-09-04"
+
+[assets]
+directory = "./site/dist"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+
+# Add the production D1 database binding in the Cloudflare dashboard as DB.
+# The Worker uses a graceful fallback until that binding is connected.
