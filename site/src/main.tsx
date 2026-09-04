@@ -5,14 +5,14 @@ import type { MeditationSession } from '../shared/schemas';
 import './styles.css';
 
 const guides = [
-  { title: 'What meditation is', text: 'Meditation is the practice of placing attention on purpose, noticing when it wanders, and gently returning.' },
-  { title: 'Start with the breath', text: 'Feel one full inhale and exhale. There is no need to empty your mind or achieve a special state.' },
-  { title: 'Keep it doable', text: 'Two quiet minutes counts. A repeatable practice is more useful than an ambitious one you avoid.' },
+  { title: 'Mindful presence', text: 'Begin by noticing what is here: breath, body, thoughts, and feelings. Attention can be focused or wide, with curiosity instead of judgment.' },
+  { title: 'Self-compassion', text: 'When practice feels difficult, respond as you would to a good friend. Awareness helps you recognize struggle; kindness helps you stay with it.' },
+  { title: 'Connection and meaning', text: 'Meditation can widen beyond the self—toward belonging, gratitude, values, and the small choices that help a life feel purposeful.' },
 ];
 const techniques = [
-  { label: 'Breathing', detail: 'Steady your attention with the natural rhythm of each breath.', color: 'mint' },
-  { label: 'Body scan', detail: 'Move attention through the body, noticing sensation without judgment.', color: 'sand' },
-  { label: 'Loving-kindness', detail: 'Offer simple phrases of care to yourself and others.', color: 'coral' },
+  { label: 'Open awareness', detail: 'Let sounds, sensations, and thoughts arrive and pass while you rest in a wider field of attention.', color: 'mint' },
+  { label: 'Self-compassion break', detail: 'Name the hard moment, remember that difficulty is human, and offer yourself a supportive phrase.', color: 'sand' },
+  { label: 'Loving-kindness', detail: 'Build a sense of connection by extending simple wishes of safety, ease, and well-being outward.', color: 'coral' },
 ];
 
 function App() {
